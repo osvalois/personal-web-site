@@ -44,7 +44,8 @@ export default siteConfig({
   //
    pageUrlOverrides: {
      '/projects-and-services': 'Projects-and-services-ae1ae745c82547b0b479bf61efc46f17',
-     '/contact': 'Contact-us-a046246695cd4261997bac00b40c2c1a'
+     '/contact': 'Contact-us-a046246695cd4261997bac00b40c2c1a',
+     '/prevencin-de-fraude-crediticio': 'Prevencin-de-fraude-crediticio-a5dac45f30264cc4bf43421481324d42'
    },
   //pageUrlOverrides: null,
 
