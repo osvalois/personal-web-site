@@ -44,7 +44,7 @@ export default siteConfig({
   //
    pageUrlOverrides: {
      '/projects-and-services': 'Projects-and-services-ae1ae745c82547b0b479bf61efc46f17',
-     '/contact': 'Contact-a046246695cd4261997bac00b40c2c1a'
+     '/contact': 'Contact-us-a046246695cd4261997bac00b40c2c1a'
    },
   //pageUrlOverrides: null,
 
@@ -63,7 +63,7 @@ export default siteConfig({
      },
      {
        title: 'Contact',
-       pageId: 'Contact-a046246695cd4261997bac00b40c2c1a'
+       pageId: 'Contact-us-a046246695cd4261997bac00b40c2c1a'
      }
    ]
 })

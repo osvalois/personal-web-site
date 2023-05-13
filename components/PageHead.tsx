@@ -11,8 +11,9 @@ export const PageHead: React.FC<
     description?: string
     image?: string
     url?: string
+    selectedTab?: string // Agregamos una nueva propiedad para indicar el tab seleccionado
   }
-> = ({ site, title, description, pageId, image, url }) => {
+> = ({ site, title, description, pageId, image, url, selectedTab }) => {
   const rssFeedUrl = `${config.host}/feed`
 
   title = title ?? site?.name
@@ -82,6 +83,23 @@ export const PageHead: React.FC<
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
       <title>{title}</title>
-    </Head>
-  )
-}
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener("DOMContentLoaded", function() {
+              const selectedTab = "${selectedTab}"; // Obtenemos el valor de la propiedad "selectedTab"
+              const tabs = document.querySelectorAll(".nav-link"); // Obtenemos los links de la navegación
+              tabs.forEach(tab => {
+                if (tab.textContent.toLowerCase() === selectedTab.toLowerCase()) { // Comparamos el valor de la propiedad con el contenido del link
+                  tab.classList.add("active"); // Agregamos la "active" class al link correspondiente si hay una coincidencia
+                }
+                });
+                });
+                `,
+                }}
+                />
+                </Head>
+                )
+                }
+              
