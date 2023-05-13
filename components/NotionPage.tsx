@@ -20,7 +20,6 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
-import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
@@ -249,7 +248,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         site={site}
         title={title}
         description={socialDescription}
-        image={socialImage}
+        //image={socialImage}
         url={canonicalPageUrl}
       />
 
@@ -281,7 +280,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
         footer={footer}
       />
 
-      <GitHubShareButton />
     </>
   )
 }
